@@ -27,9 +27,21 @@ class QrCodePix {
     {
         extract($dataPix);
 
+        if(!$key):
+            die('Chave pix inexistente ou inválida!');
+        endif;
+        
+        if(!$amount):
+            die('Entre com um valor válido!');
+        endif;
+        
+        if(!$name):
+            die('Entre com o nome do beneficiário!');
+        endif;
+
         $pix = array(
             00 => '01',
-            01 => '02',
+            01 => '12',
             26 => array(
                 00 => 'BR.GOV.BCB.PIX',
                 01 => $key,
@@ -37,7 +49,7 @@ class QrCodePix {
             ),
             52 => '0000',
             53 => '986',
-            54 => $amount,
+            54 => (float) $amount,
             58 => 'BR',
             59 => $name,
             60 => $city,
@@ -118,11 +130,11 @@ class QrCodePix {
         for($c = 0; $c < $strlen; $c++) {
             $crc ^= $this->charCodeAt($pix, $c) << 8;
             for($i = 0; $i < 8; $i++) {
-                    if($crc & 0x8000) {
+                if($crc & 0x8000) {
                     $crc = ($crc << 1) ^ 0x1021;
-                    } else {
+                } else {
                     $crc = $crc << 1;
-                    }
+                }
             }
         }
 
