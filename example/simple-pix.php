@@ -2,17 +2,17 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use mariolucasdev\QrCodePix\QrCodePix;
+use mariolucasdev\QrCodePix;
 
 $data = array(
-    'key' => '', // Sua chave Pix
+    'key' => '', // Chave pix
     'amount' => 0, // Valor em Float
     'description' => '', // Descrição do Pagamento
     'name' => '', // Nome do Recebedor
     'city' => '' // Cidade + UF (Araripina-PE)
 );
 
-$pix = (new QrCodePix)->generate($data);
+$pix = (new QrCodePix\QrCodePix)->generate($data);
 
 echo $pix['pix'];
 echo '<br><br>';
