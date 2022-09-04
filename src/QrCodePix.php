@@ -2,8 +2,6 @@
 
 namespace mariolucasdev\QrCodePix;
 
-require __DIR__.'/../vendor/autoload.php';
-
 use chillerlan\QRCode\{QRCode};
 
 /**
