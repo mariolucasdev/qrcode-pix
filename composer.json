@@ -1,0 +1,25 @@
+{
+    "name": "mariolucasdev/qrcode-pix",
+    "description": "Gera qrcode do pix e chave copia e cola.",
+    "homepage": "https://github.com/mariolucasdev/qrcode_pix",
+	"keywords": [
+		"QR code pix", "qrcodepix", "pix", "qrcode-pix-generator", "phpqrcodepix"
+	],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mário Lucas",
+            "email": "mariolucasdev@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "chillerlan/php-qrcode": "^4.3"
+    },
+    "autoload" : {
+        "psr-4" : {
+          "mariolucasdev\\QrCodePix\\" :  "src/"
+        }
+    }
+}
