@@ -13,7 +13,7 @@
             "email": "mariolucasdev@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": "^7.4 || ^8.0",
         "chillerlan/php-qrcode": "^4.3"
