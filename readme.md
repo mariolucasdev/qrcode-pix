@@ -9,9 +9,10 @@ composer require mariolucasdev/qrcode-pix
 
 ## Usando a lib
 ```php
-require __DIR__ . '/vendor/autoload.php';
 
 use mariolucasdev\QrCodePix;
+
+require __DIR__ . '/vendor/autoload.php';
 
 $data = array(
     'key' => '', // Chave pix
